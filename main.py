@@ -21,5 +21,8 @@ def get_movies() -> list[schemas.Movie]:
     return actions.get_movies()
 
 @app.get("/nominations")
-def get_nominations() -> list[schemas.Nomination]:
-    return actions.get_nominations()
+def get_nominations(
+    country_awarding: str | None = None,
+    country_submitting: str | None = None
+    ) -> list[schemas.Nomination]:
+    return actions.get_nominations(country_awarding, country_submitting)
