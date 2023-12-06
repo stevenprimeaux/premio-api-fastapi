@@ -1,6 +1,20 @@
 from typing import Optional
 from pydantic import BaseModel
 
+class Award(BaseModel):
+    institution: str
+    name: str
+    country_awarding: str
+    
+    class Config:
+        from_attributes = True
+
+class Institution(BaseModel):
+    name: str
+    
+    class Config:
+        from_attributes = True
+
 class Movie(BaseModel):
     title: str
     

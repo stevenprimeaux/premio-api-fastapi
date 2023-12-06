@@ -2,7 +2,8 @@ __pycache__/
 Include/
 Lib/
 Scripts/
-sql/
+
+*.csv
 
 .env
 pyvenv.cfg
