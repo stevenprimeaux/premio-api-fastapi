@@ -5,7 +5,7 @@ from pydantic import BaseModel
 class Award(BaseModel):
     institution: str
     name: str
-    country_awarding: str
+    country_awarding: Optional[str]
 
     class Config:
         from_attributes = True
